@@ -2,7 +2,7 @@
   --primary-color: #f0f0f0;
   --secondary-color: #71aefd;
   --background-color: #252525;
-  --grey-color: #f0f0f0;
+  --grey-color: #eeeeee;
 }
 
 body {
@@ -64,6 +64,7 @@ body {
   width: 12rem;
   margin: 0 auto;
   margin-bottom: 1rem;
+  margin-right: 1rem;
 }
 
 .underconst-links {
@@ -84,6 +85,11 @@ body {
 .contact-icon {
   width: 5rem;
   margin: 0 0.7rem;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .shape {
@@ -93,6 +99,10 @@ body {
   transform: scale(0.9);
   z-index: -1;
   animation: rotation 20s infinite ease-in-out;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 
 @keyframes rotation {
