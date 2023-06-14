@@ -3,6 +3,7 @@
   --secondary-color: #71aefd;
   --background-color: #252525;
   --grey-color: #eeeeee;
+  --slight-blue-color: #c4dffd;
 }
 
 body {
@@ -83,6 +84,11 @@ body {
   display: flex;
   align-items: center;
   border-radius: 10px;
+
+  @media screen and (max-width: 1000px) {
+    background-color: white;
+    border: 3px solid var(--secondary-color);
+  }
 }
 
 .contact-icon {
@@ -103,7 +109,7 @@ body {
   z-index: -1;
   animation: rotation 20s infinite ease-in-out;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1000px) {
     display: none;
   }
 }
@@ -120,5 +126,16 @@ body {
   100% {
     rotate: 0deg;
     transform: translate(0, 0);
+  }
+}
+
+.wave {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: -1;
+
+  @media screen and (min-width: 1000px) {
+    display: none;
   }
 }
